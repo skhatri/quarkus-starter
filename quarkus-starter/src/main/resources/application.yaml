@@ -1,0 +1,7 @@
+features:
+  pokemon:
+    table-name: pokedex.entries
+
+quarkus:
+  devservices:
+    enabled: false
