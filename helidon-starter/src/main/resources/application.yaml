@@ -1,0 +1,9 @@
+db:
+  source: "jdbc"
+  connection:
+    url: "jdbc:postgresql://127.0.0.1:5432/pokemon?useSSL=false"
+    username: "pokemon_user"
+    password: "pokemon"
+  statements:
+    ping: "DO 0"
+    select-all-pokemons: "SELECT name, primary_type FROM pokedex.entries"
