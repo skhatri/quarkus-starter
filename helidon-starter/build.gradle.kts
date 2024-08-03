@@ -53,7 +53,7 @@ dependencies {
 
 
 task("runApp", JavaExec::class) {
-    main = "com.github.starter.ApplicationKt"
+    mainClass = "com.github.starter.ApplicationKt"
     classpath = sourceSets["main"].runtimeClasspath
     jvmArgs = listOf("-Xms512m", "-Xmx512m")
 }
