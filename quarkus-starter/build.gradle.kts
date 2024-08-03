@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.sonarqube") version "3.5.0.2730"
     id("jacoco")
-    id("io.quarkus") version "2.16.2.Final"
+    id("io.quarkus") version "3.13.0"
 }
 
 java {
@@ -44,6 +44,7 @@ dependencies {
     implementation("io.quarkus:quarkus-reactive-routes")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.quarkus:quarkus-arc")
+    implementation("org.ow2.asm:asm:9.7")
     testImplementation("io.quarkus:quarkus-junit5")
 
 
@@ -51,7 +52,7 @@ dependencies {
 }
 
 task("runApp", JavaExec::class) {
-    main = "com.github.starter.ApplicationKt"
+    mainClass = "com.github.starter.ApplicationKt"
     classpath = sourceSets["main"].runtimeClasspath
     jvmArgs = listOf("-Xms512m", "-Xmx512m")
 }
